@@ -51,6 +51,9 @@ for version; do
 			alpine*)
 				template='Dockerfile-alpine.template'
 				;;
+			freebsd*)
+				template='Dockerfile-freebsd.template'
+				;;
 			*)
 				template='Dockerfile-debian.template'
 				;;
@@ -61,6 +64,14 @@ for version; do
 			gawk -f "$jqt" "$template"
 		} > "$dir/Dockerfile"
 
-		cp -a docker-entrypoint.sh docker-ensure-initdb.sh "$dir/"
+		case "$variant" in
+			freebsd*)
+				cp -a .freebsd/* "$dir/"
+				;;
+			*)
+				cp -a docker-entrypoint.sh docker-ensure-initdb.sh "$dir/"
+				;;
+		esac
+
 	done
 done

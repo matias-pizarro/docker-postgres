@@ -10,12 +10,21 @@ supportedAlpineVersions=(
 	3.22
 	3.21
 )
+supportedFreeBSDVersions=(
+	14.3
+	14.snap
+	15.snap
+	16.snap
+)
 defaultDebianSuite="${supportedDebianSuites[0]}"
 declare -A debianSuites=(
 )
 defaultAlpineVersion="${supportedAlpineVersions[0]}"
 declare -A alpineVersions=(
 	#[14]='3.16'
+)
+defaultFreeBSDVersion="${supportedFreeBSDVersions[0]}"
+declare -A freebsdVersions=(
 )
 
 cd "$(dirname "$(readlink -f "$BASH_SOURCE")")"
@@ -81,11 +90,13 @@ for version in "${versions[@]}"; do
 
 	versionAlpineVersion="${alpineVersions[$version]:-$defaultAlpineVersion}"
 	versionDebianSuite="${debianSuites[$version]:-$defaultDebianSuite}"
-	export versionAlpineVersion versionDebianSuite
+	versionFreeBSDVersion="${freebsdVersions[$version]:-$defaultFreeBSDVersion}"
+	export versionAlpineVersion versionDebianSuite versionFreeBSDVersion
 
 	doc="$(jq -nc '{
 		alpine: env.versionAlpineVersion,
 		debian: env.versionDebianSuite,
+		freebsd: env.versionFreeBSDVersion,
 	}')"
 
 	fullVersion=
@@ -131,6 +142,12 @@ for version in "${versions[@]}"; do
 	for alpineVersion in "${supportedAlpineVersions[@]}"; do
 		doc="$(jq <<<"$doc" -c --arg v "$alpineVersion" '
 			.variants += [ "alpine" + $v ]
+		')"
+	done
+
+	for freebsdVersion in "${supportedFreeBSDVersions[@]}"; do
+		doc="$(jq <<<"$doc" -c --arg v "$freebsdVersion" '
+			.variants += [ "freebsd" + $v ]
 		')"
 	done
 

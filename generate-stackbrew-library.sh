@@ -83,6 +83,7 @@ for version; do
 
 	alpine="$(jq -r '.[env.version].alpine' versions.json)"
 	debian="$(jq -r '.[env.version].debian' versions.json)"
+	freebsd="$(jq -r '.[env.version].freebsd' versions.json)"
 
 	fullVersion="$(jq -r '.[env.version].version' versions.json)"
 
@@ -120,6 +121,10 @@ for version; do
 				;;
 			alpine"$alpine")
 				variantAliases+=( "${versionAliases[@]/%/-alpine}" )
+				variantAliases=( "${variantAliases[@]//latest-/}" )
+				;;
+			freebsd"$freebsd")
+				variantAliases+=( "${versionAliases[@]/%/-freebsd}" )
 				variantAliases=( "${variantAliases[@]//latest-/}" )
 				;;
 		esac

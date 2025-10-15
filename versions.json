@@ -2,6 +2,7 @@
   "18": {
     "alpine": "3.22",
     "debian": "trixie",
+    "freebsd": "14.3",
     "trixie": {
       "version": "18.0-1.pgdg13+3",
       "arches": [
@@ -14,7 +15,11 @@
       "trixie",
       "bookworm",
       "alpine3.22",
-      "alpine3.21"
+      "alpine3.21",
+      "freebsd14.3",
+      "freebsd14.snap",
+      "freebsd15.snap",
+      "freebsd16.snap"
     ],
     "bookworm": {
       "version": "18.0-1.pgdg12+3",
@@ -31,6 +36,7 @@
   "17": {
     "alpine": "3.22",
     "debian": "trixie",
+    "freebsd": "14.3",
     "trixie": {
       "version": "17.6-2.pgdg13+1",
       "arches": [
@@ -43,7 +49,11 @@
       "trixie",
       "bookworm",
       "alpine3.22",
-      "alpine3.21"
+      "alpine3.21",
+      "freebsd14.3",
+      "freebsd14.snap",
+      "freebsd15.snap",
+      "freebsd16.snap"
     ],
     "bookworm": {
       "version": "17.6-2.pgdg12+1",
@@ -60,6 +70,7 @@
   "16": {
     "alpine": "3.22",
     "debian": "trixie",
+    "freebsd": "14.3",
     "trixie": {
       "version": "16.10-1.pgdg13+1",
       "arches": [
@@ -72,7 +83,11 @@
       "trixie",
       "bookworm",
       "alpine3.22",
-      "alpine3.21"
+      "alpine3.21",
+      "freebsd14.3",
+      "freebsd14.snap",
+      "freebsd15.snap",
+      "freebsd16.snap"
     ],
     "bookworm": {
       "version": "16.10-1.pgdg12+1",
@@ -89,6 +104,7 @@
   "15": {
     "alpine": "3.22",
     "debian": "trixie",
+    "freebsd": "14.3",
     "trixie": {
       "version": "15.14-1.pgdg13+1",
       "arches": [
@@ -101,7 +117,11 @@
       "trixie",
       "bookworm",
       "alpine3.22",
-      "alpine3.21"
+      "alpine3.21",
+      "freebsd14.3",
+      "freebsd14.snap",
+      "freebsd15.snap",
+      "freebsd16.snap"
     ],
     "bookworm": {
       "version": "15.14-1.pgdg12+1",
@@ -118,6 +138,7 @@
   "14": {
     "alpine": "3.22",
     "debian": "trixie",
+    "freebsd": "14.3",
     "trixie": {
       "version": "14.19-1.pgdg13+1",
       "arches": [
@@ -130,7 +151,11 @@
       "trixie",
       "bookworm",
       "alpine3.22",
-      "alpine3.21"
+      "alpine3.21",
+      "freebsd14.3",
+      "freebsd14.snap",
+      "freebsd15.snap",
+      "freebsd16.snap"
     ],
     "bookworm": {
       "version": "14.19-1.pgdg12+1",
@@ -147,6 +172,7 @@
   "13": {
     "alpine": "3.22",
     "debian": "trixie",
+    "freebsd": "14.3",
     "trixie": {
       "version": "13.22-1.pgdg13+1",
       "arches": [
@@ -159,7 +185,11 @@
       "trixie",
       "bookworm",
       "alpine3.22",
-      "alpine3.21"
+      "alpine3.21",
+      "freebsd14.3",
+      "freebsd14.snap",
+      "freebsd15.snap",
+      "freebsd16.snap"
     ],
     "bookworm": {
       "version": "13.22-1.pgdg12+1",
