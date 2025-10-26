@@ -11,10 +11,10 @@ supportedAlpineVersions=(
 	3.21
 )
 supportedFreeBSDVersions=(
-	14.3
-	14.snap
 	15.snap
+	14.3
 	16.snap
+	14.snap
 )
 defaultDebianSuite="${supportedDebianSuites[0]}"
 declare -A debianSuites=(
